@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 require('./hbs/helpers');
-const port = process.env.port || 3002;
+const port = process.env.port || 3000;
 
 app.use(express.static(__dirname + '/public'));
 
@@ -36,6 +36,6 @@ app.post('/', function(req, res) {
     res.send('nombre World')
 })
 
-app.listen(3002, () => {
+app.listen(port, () => {
     console.log(`Escuchando peticiones en el puerto ${port}`);
 })
