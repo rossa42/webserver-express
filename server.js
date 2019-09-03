@@ -36,6 +36,6 @@ app.post('/', function(req, res) {
     res.send('nombre World')
 })
 
-app.listen(port, () => {
+app.listen(process.env.port, () => {
     console.log(`Escuchando peticiones en el puerto ${port}`);
 })
